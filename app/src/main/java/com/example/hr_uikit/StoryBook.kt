@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.example.uikit.presentation.Input
+import com.example.uikit.presentation.Select
 import com.example.uikit.presentation.buttons.DestructiveButton
 import com.example.uikit.presentation.buttons.PrimaryButton
 import com.example.uikit.presentation.buttons.SecondaryButton
@@ -118,4 +119,16 @@ fun ShowPasswordInput(){
         errorMessage = "error",
         showIcon = true
     ) { }
+}
+
+@ShowkaseComposable
+@Composable
+fun ShowSelect(){
+    Select(
+        modifier = Modifier,
+        onCLick = {},
+        header = "header",
+        value = "value",
+        items = listOf("djfksj", "dfslks;a", "dljfsdjfld")
+    )
 }
