@@ -1,26 +1,21 @@
 package com.example.hr_uikit
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.hr_uikit.ui.theme.HR_UIKITTheme
+import com.airbnb.android.showkase.models.Showkase
 
+//13.05.2026
+//11
+//класс старта приложения
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.i("startActivity", "старт MainActivity")
         enableEdgeToEdge()
-        setContent {
-            HR_UIKITTheme {
-
-            }
-        }
+        startActivity(Showkase.getBrowserIntent(this))
+        Log.d("start", "старт storybook")
+        finish()
     }
 }

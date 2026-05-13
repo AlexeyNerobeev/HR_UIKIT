@@ -42,8 +42,10 @@ android {
 
 dependencies {
 
-    implementation (libs.showkase)
-    ksp (libs.showkase.processor)
+    implementation(project(":uikit"))
+    implementation(libs.showkase)
+    ksp(libs.showkase.processor)
+    implementation("androidx.compose.material:material-icons-extended")
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
