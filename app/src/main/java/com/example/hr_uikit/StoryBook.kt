@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
+import com.example.uikit.presentation.Input
 import com.example.uikit.presentation.buttons.DestructiveButton
 import com.example.uikit.presentation.buttons.PrimaryButton
 import com.example.uikit.presentation.buttons.SecondaryButton
@@ -62,5 +63,59 @@ fun ShowDestructiveButton(){
     DestructiveButton(
         modifier = Modifier,
         text = "text"
+    ) { }
+}
+
+@ShowkaseComposable
+@Composable
+fun ShowDefaultInput(){
+    Input(
+        modifier = Modifier,
+        value = "",
+        placeholder = "jsdkfsjdf",
+        isError = false,
+        isEnabled = true,
+        errorMessage = "error",
+        showIcon = false
+    ) { }
+}
+
+@ShowkaseComposable
+@Composable
+fun ShowErrorInput(){
+    Input(
+        value = "sjkdklfjskd",
+        placeholder = "jsldfjksdhk",
+        isError = true,
+        isEnabled = true,
+        errorMessage = "error",
+        showIcon = false
+    ) { }
+}
+
+@ShowkaseComposable
+@Composable
+fun ShowDisabledInput(){
+    Input(
+        value = "",
+        placeholder = "jsdlkfhskdjf",
+        isError = false,
+        isEnabled = false,
+        showIcon = false,
+        errorMessage = "error"
+    ) { }
+}
+
+@ShowkaseComposable
+@Composable
+fun ShowPasswordInput(){
+    Input(
+        modifier = Modifier,
+        value = "dlk;fsd",
+        placeholder = "ksdklflsdk",
+        isError = false,
+        isEnabled = true,
+        errorMessage = "error",
+        showIcon = true
     ) { }
 }
